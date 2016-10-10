@@ -27,8 +27,9 @@
       // other libraries
       'rxjs': 'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api',
-      '@ngrx/core': 'npm:@ngrx/core',
-      '@ngrx/store': 'npm:@ngrx/store'
+      '@ngrx': 'node_modules/@ngrx'
+      // '@ngrx/core': 'npm:@ngrx/core',
+      // '@ngrx/store': 'npm:@ngrx/store'
 
     },
     // packages tells the System loader how to load when no filename and/or no extension
@@ -44,14 +45,11 @@
         main: './index.js',
         defaultExtension: 'js'
       },
-      '@ngrx/core': {
-        main: 'index.js',
-        format: 'cjs'
-      },
-      '@ngrx/store': {
-        main: 'index.js',
-        format: 'cjs'
-      }
+      '@ngrx/core': { main: '/bundles/core.umd.js', defaultExtension: 'js' },
+      '@ngrx/store': { main: '/bundles/store.umd.js', defaultExtension: 'js' },
+      '@ngrx/effects': { main: '/bundles/effects.umd.js', defaultExtension: 'js' },
+      // '@ngrx/store-devtools': { main: '/bundles/store-devtools.umd.js', defaultExtension: 'js' },
+      // '@ngrx/store-log-monitor': { main: '/bundles/store-log-monitor.umd.js', defaultExtension: 'js' },
     }
   });
 })(this);
